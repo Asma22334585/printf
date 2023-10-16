@@ -5,7 +5,7 @@
  * @ap: character.
  * @buf: buffer pointer
  * @ibuf: index for buffer pointer
- * Return: int.
+ * Return:  int.
  */
 int print_uphex(va_list ap, char *buf, unsigned int ibuf)
 {
@@ -42,4 +42,3 @@ int print_uphex(va_list ap, char *buf, unsigned int ibuf)
 	free(hex);
 	return (y);
 }
-
