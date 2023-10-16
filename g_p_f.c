@@ -1,10 +1,12 @@
 #include "main.h"
+
 /**
  * g_p_f - selects the correct function to perform the operation.
  * @s: argument.
  * @index: index.
  * Return: pointer to a function.
  */
+
 int (*g_p_f(const char *s, int index))(va_list, char *, unsigned int)
 {
 	print_WA pr[] = {
@@ -56,3 +58,4 @@ int (*g_p_f(const char *s, int index))(va_list, char *, unsigned int)
 	}
 	return (pr[i].f);
 }
+
