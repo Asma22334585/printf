@@ -24,8 +24,7 @@ int printshunint(va_list ap, char *buf, unsigned int ibuf)
 
 	for (i = 0; d > 0; d /= 10, i++)
 	{
-		ibuf = handl_buf(buf, ((k / d) % 10) + '0', ibuf);
+		ibuf = handl_buffer(buf, ((k / d) % 10) + '0', ibuf);
 	}
 	return (i);
 }
-

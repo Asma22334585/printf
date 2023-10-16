@@ -16,12 +16,12 @@ int printpint(va_list ap, char *buf, unsigned int ibuf)
 	if (x < 0)
 	{
 		k = x * -1;
-		ibuf = handl_buf(buf, '-', ibuf);
+		ibuf = handl_buffer(buf, '-', ibuf);
 	}
 	else
 	{
 		k = x;
-		ibuf = handl_buf(buf, '+', ibuf);
+		ibuf = handl_buffer(buf, '+', ibuf);
 	}
 	int_t = k;
 	d = 1;
@@ -32,7 +32,7 @@ int printpint(va_list ap, char *buf, unsigned int ibuf)
 	}
 	for (i = 0; d > 0; d /= 10, i++)
 	{
-		ibuf = handl_buf(buf, ((k / d) % 10) + '0', ibuf);
+		ibuf = handl_buffer(buf, ((k / d) % 10) + '0', ibuf);
 	}
 	return (i + 1);
 }

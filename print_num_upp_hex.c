@@ -16,7 +16,7 @@ int printnupphex(va_list ap, char *buf, unsigned int ibuf)
 	w = 0;
 	if (x == 0)
 	{
-		ibuf = handl_buf(buf, '0', ibuf);
+		ibuf = handl_buffer(buf, '0', ibuf);
 		return (1);
 	}
 	if (x < 0)
@@ -24,8 +24,8 @@ int printnupphex(va_list ap, char *buf, unsigned int ibuf)
 		x = (x * -1) - 1;
 		w = 1;
 	}
-	ibuf = handl_buf(buf, '0', ibuf);
-	ibuf = handl_buf(buf, 'X', ibuf);
+	ibuf = handl_buffer(buf, '0', ibuf);
+	ibuf = handl_buffer(buf, 'X', ibuf);
 	b = malloc(sizeof(char) * (32 + 1));
 	b = f_b_r(b, x, w, 32);
 	hex = malloc(sizeof(char) * (8 + 1));
@@ -36,7 +36,7 @@ int printnupphex(va_list ap, char *buf, unsigned int ibuf)
 			f_d = 1;
 		if (f_d)
 		{
-			ibuf = handl_buf(buf, hex[i], ibuf);
+			ibuf = handl_buffer(buf, hex[i], ibuf);
 			y++;
 		}
 	}
@@ -44,4 +44,3 @@ int printnupphex(va_list ap, char *buf, unsigned int ibuf)
 	free(hex);
 	return (y + 2);
 }
-

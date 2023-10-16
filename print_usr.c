@@ -21,17 +21,17 @@ int print_usr(va_list ap, char *buf, unsigned int ibuf)
 	{
 		if (str[i] < 32 || str[i] >= 127)
 		{
-			ibuf = handl_buf(buf, '\\', ibuf);
-			ibuf = handl_buf(buf, 'x', ibuf);
+			ibuf = handl_buffer(buf, '\\', ibuf);
+			ibuf = handl_buffer(buf, 'x', ibuf);
 			op = str[i];
 			b = f_b_r(b, op, 0, 32);
 			hex = f_h_r(b, hex, 1, 8);
-			ibuf = handl_buf(buf, hex[6], ibuf);
-			ibuf = handl_buf(buf, hex[7], ibuf);
+			ibuf = handl_buffer(buf, hex[6], ibuf);
+			ibuf = handl_buffer(buf, hex[7], ibuf);
 			sum += 3;
 		}
 		else
-			ibuf = handl_buf(buf, str[i], ibuf);
+			ibuf = handl_buffer(buf, str[i], ibuf);
 	}
 	free(b);
 	free(hex);

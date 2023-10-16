@@ -16,7 +16,7 @@ int printnumocta(va_list ap, char *buf, unsigned int ibuf)
 	w = 0;
 	if (x == 0)
 	{
-		ibuf = handl_buf(buf, '0', ibuf);
+		ibuf = handl_buffer(buf, '0', ibuf);
 		return (1);
 	}
 	if (x < 0)
@@ -24,7 +24,7 @@ int printnumocta(va_list ap, char *buf, unsigned int ibuf)
 		x = (x * -1) - 1;
 		w = 1;
 	}
-	ibuf = handl_buf(buf, '0', ibuf);
+	ibuf = handl_buffer(buf, '0', ibuf);
 	b = malloc(sizeof(char) * (32 + 1));
 	b = f_b_r(b, x, w, 32);
 	o = malloc(sizeof(char) * (11 + 1));
@@ -35,7 +35,7 @@ int printnumocta(va_list ap, char *buf, unsigned int ibuf)
 			f_d = 1;
 		if (f_d)
 		{
-			ibuf = handl_buf(buf, o[i], ibuf);
+			ibuf = handl_buffer(buf, o[i], ibuf);
 			y++;
 		}
 	}
@@ -43,4 +43,3 @@ int printnumocta(va_list ap, char *buf, unsigned int ibuf)
 	free(o);
 	return (y + 1);
 }
-

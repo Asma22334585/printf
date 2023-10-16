@@ -11,7 +11,7 @@ int print_char(va_list ap, char *buf, unsigned int ibuf)
 	char c;
 
 	c = va_arg(ap, int);
-	handl_buf(buf, c, ibuf);
+	handl_buffer(buf, c, ibuf);
 
 	return (1);
 }

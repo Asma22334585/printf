@@ -19,7 +19,7 @@ int print_address(va_list ap, char *buf, unsigned int ibuf)
 	if (address == NULL)
 	{
 		for (i = 0; nill[i]; i++)
-			ibuf = handl_buf(buf, nill[i], ibuf);
+			ibuf = handl_buffer(buf, nill[i], ibuf);
 		return (5);
 	}
 	x = (intptr_t)address;
@@ -33,15 +33,15 @@ int print_address(va_list ap, char *buf, unsigned int ibuf)
 	b = f_b_r(b, x, w, 64);
 	hex = malloc(sizeof(char) * (16 + 1));
 	hex = f_h_r(b, hex, 0, 16);
-	ibuf = handl_buf(buf, '0', ibuf);
-	ibuf = handl_buf(buf, 'x', ibuf);
+	ibuf = handl_buffer(buf, '0', ibuf);
+	ibuf = handl_buffer(buf, 'x', ibuf);
 	for (f_d = i = count = 0; hex[i]; i++)
 	{
 		if (hex[i] != '0' && f_d == 0)
 			f_d = 1;
 		if (f_d)
 		{
-			ibuf = handl_buf(buf, hex[i], ibuf);
+			ibuf = handl_buffer(buf, hex[i], ibuf);
 			count++;
 		}
 	}

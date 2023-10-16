@@ -17,7 +17,7 @@ int printhupphex(va_list ap, char *buf, unsigned int ibuf)
 
 	if (x == 0)
 	{
-		ibuf = handl_buf(buf, '0', ibuf);
+		ibuf = handl_buffer(buf, '0', ibuf);
 		return (1);
 	}
 	if (x < 0)
@@ -37,7 +37,7 @@ int printhupphex(va_list ap, char *buf, unsigned int ibuf)
 			f_d = 1;
 		if (f_d)
 		{
-			ibuf = handl_buf(buf, hex[i], ibuf);
+			ibuf = handl_buffer(buf, hex[i], ibuf);
 			y++;
 		}
 	}
@@ -47,4 +47,3 @@ int printhupphex(va_list ap, char *buf, unsigned int ibuf)
 
 	return (y);
 }
-
