@@ -14,7 +14,7 @@ int e_p_f(const char *s, int index)
 		{"o", print_octal}, {"x", print_hexd}, {"X", print_uphex},
 		{"S", print_usr}, {"p", print_address}, {"li", printlint},
 		{"ld", printlint}, {"lu", printlunint}, {"lo", print_long_oct},
-		{"lx", printlhexdecimal}, {"lX", print_uphex}, {"hi", printshint},
+		{"lx", printlhex}, {"lX", printlupphexdecimal}, {"hi", printshint},
 		{"hd", printshint}, {"hu", printshunint}, {"ho", printldoct},
 		{"hx", printshhex}, {"hX", printhupphex}, {"#o", printnumocta},
 		{"#x", printnumhex}, {"#X", printnupphex}, {"#i", print_integer},
