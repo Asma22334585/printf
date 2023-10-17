@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
- * print_b - convert to binary
- * @ap: input
- * Return: int
+ * print_b - convert to binary.
+ * @ap: input.
+ * Return: int.
  */
+
 int print_b(va_list ap, char *buf, unsigned int ibuf)
 {
 	int x, y, i, z, w;
