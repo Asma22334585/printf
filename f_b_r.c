@@ -8,31 +8,30 @@
  * @l: size
  * Return: int
  */
-char *f_b_r(char *c, long int k, int m, int l)
+char *f_b_r(char *bnr, long int k, int m, int l)
 {
 	int i;
 
 	for (i = 0; i < l; i++)
-		c[i] = '0';
-	c[l] = '\0';
+		bnr[i] = '0';
+	bnr[l] = '\0';
 	for (i = l - 1; k > 1; i--)
 	{
 		if (k == 2)
-			c[i] = '0';
+			bnr[i] = '0';
 		else
-			c[i] = (k % 2) + '0';
+			bnr[i] = (k % 2) + '0';
 		k /= 2;
 	}
 	if (k != 0)
-		c[i] = '1';
+		bnr[i] = '1';
 	if (m)
 	{
-		for (i = 0; c[i]; i++)
-			if (c[i] == '0')
-				c[i] = '1';
+		for (i = 0; bnr[i]; i++)
+			if (bnr[i] == '0')
+				bnr[i] = '1';
 			else
-				c[i] = '0';
+				bnr[i] = '0';
 	}
-	return (c);
+	return (bnr);
 }
-
