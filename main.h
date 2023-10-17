@@ -20,6 +20,7 @@ typedef struct print
 	int (*f)(va_list, char *, unsigned int);
 } print_WA;
 
+int printlupphexdecimal(va_list ap, char *buf, unsigned int ibuf);
 int _printf(const char *format, ...);
 int (*g_p_f(const char *s, int index))(va_list, char *, unsigned int);
 int e_p_f(const char *s, int index);
@@ -37,7 +38,7 @@ int print_buffer(char *buf, unsigned int nbuf);
 int print_char(va_list ap, char *buf, unsigned int ibuf);
 int print_hexd(va_list ap, char *buf, unsigned int ibuf);
 int print_integer(va_list ap, char *buf, unsigned int ibuf);
-int printlhexdecimal(va_list ap, char *buf, unsigned int ibuf);
+int printlhex(va_list ap, char *buf, unsigned int ibuf);
 int printlint(va_list ap, char *buf, unsigned int ibuf);
 int printlunint(va_list ap, char *buf, unsigned int ibuf);
 int printnumhex(va_list ap, char *buf, unsigned int ibuf);
