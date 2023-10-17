@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * printlhexdecimal - prints a long decimal in hex
+ * printlupphexdecimal - prints a long decimal in hex
  * @ap: character.
  * @buf: buffer pointer
  * @ibuf: index for buffer pointer
  * Return: int
  */
-int printlhexdecimal(va_list ap, char *buf, unsigned int ibuf)
+int printlupphexdecimal(va_list ap, char *buf, unsigned int ibuf)
 {
 	long int x, i, w, y, f_d;
 	char *hex, *b;

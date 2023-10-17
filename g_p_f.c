@@ -17,7 +17,7 @@ int (*g_p_f(const char *s, int index))(va_list, char *, unsigned int)
 		{"X", print_uphex}, {"S", print_usr},
 		{"p", print_address}, {"li", printlint},
 		{"ld", printlint}, {"lu", printlunint},
-		{"lo", print_long_oct}, {"lx", printlhexdecimal},
+		{"lo", print_long_oct}, {"lx", printlhex},
 		{"lX", print_uphex}, {"hi", printshint},
 		{"hd", printshint}, {"hu", printshunint},
 		{"ho", printldoct}, {"hx", printhupphex},
