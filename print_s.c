@@ -18,7 +18,7 @@ int print_s(va_list ap, char *buf, unsigned int ibuf)
 	{
 		for (i = 0; c[i]; i++)
 			ibuf = handl_buffer(buf, c[i], ibuf);
-		return (6);
+		return (1);
 	}
 	for (i = 0; s[i]; i++)
 		ibuf = handl_buffer(buf, s[i], ibuf);
