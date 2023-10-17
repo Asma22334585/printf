@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * printlhex - decimal in hex
  * @ap: input
@@ -6,6 +7,7 @@
  * @ibuf: index for buffer pointer
  * Return: int
  */
+
 int printlhex(va_list ap, char *buf, unsigned int ibuf)
 {
 	long int x, i, w, y, f_dt;
