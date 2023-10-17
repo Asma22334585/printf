@@ -8,9 +8,8 @@
  * Return: 1.
  */
 
-int print_prg(va_list u, char *buf, unsigned int q)
+int print_prg(va_list u __attribute__((unused)), char *buf, unsigned int q)
 {
-	(void)u;
 	handl_buffer(buf, '%', q);
 
 	return (1);
