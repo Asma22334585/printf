@@ -7,6 +7,7 @@
  * @ibuf: index for buffer pointer
  * Return: 1.
  */
+
 int print_s(va_list ap, char *buf, unsigned int ibuf)
 {
 	char *s;
