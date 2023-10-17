@@ -14,10 +14,10 @@ int e_p_f(const char *s, int index)
 		{"o", print_octal}, {"x", print_hexd}, {"X", print_uphex},
 		{"S", print_usr}, {"p", print_address}, {"li", printlint},
 		{"ld", printlint}, {"lu", printlunint}, {"lo", print_long_oct},
-		{"lx", print_long_oct}, {"lX", print_uphex}, {"hi", printshint},
+		{"lx", printlhexdecimal}, {"lX", print_uphex}, {"hi", printshint},
 		{"hd", printshint}, {"hu", printshunint}, {"ho", printldoct},
-		{"hx", printnumhex}, {"hX", printhupphex}, {"#o", printnumocta},
-		{"#x", printnumhex}, {"#X", print_uphex}, {"#i", print_integer},
+		{"hx", printshhex}, {"hX", printhupphex}, {"#o", printnumocta},
+		{"#x", printnumhex}, {"#X", printnupphex}, {"#i", print_integer},
 		{"#d", print_integer}, {"#u", print_unint}, {"+i", printpint},
 		{"+d", printpint}, {"+u", print_unint}, {"+o", print_octal},
 		{"+x", print_hexd}, {"+X", print_uphex}, {" i", printshint},
@@ -49,4 +49,3 @@ int e_p_f(const char *s, int index)
 	}
 	return (j);
 }
-
