@@ -3,6 +3,8 @@
 /**
  * print_b - convert to binary.
  * @ap: input.
+ * @buf: buffer pointer.
+ * @ibuf: index for buffer pointer
  * Return: int.
  */
 

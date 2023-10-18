@@ -2,7 +2,7 @@
 
 /**
  * f_b_r - decimal to binary
- * @c: pointer
+ * @bnr: pointer
  * @k: input
  * @m: negative number
  * @l: size
