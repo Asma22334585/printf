@@ -2,15 +2,15 @@
 
 /**
  * fill_octal_array - writes the character c to stdout
- * @b: array binary.
- * @o: array octal.
+ * @bn: array binary.
+ * @oc: array octal.
  * Return: array.
  */
-char *fill_octal_array(char *b, char *o)
+char *fill_octal_array(char *bn, char *oc)
 {
 	int op, i, j, io, l;
 
-	o[11] = '\0';
+	oc[11] = '\0';
 	for (i = 31, io = 10; i >= 0; i--, io--)
 	{
 		if (i > 1)
@@ -18,9 +18,9 @@ char *fill_octal_array(char *b, char *o)
 		else
 			l = 2;
 		for (op = 0, j = 1; j <= l; j *= 2, i--)
-			op = ((b[i] - '0') * j) + op;
+			op = ((bn[i] - '0') * j) + op;
 		i++;
-		o[io] = op + '0';
+		oc[io] = op + '0';
 	}
-	return (o);
+	return (oc);
 }

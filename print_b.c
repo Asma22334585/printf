@@ -11,7 +11,7 @@
 int print_b(va_list ap, char *buf, unsigned int ibuf)
 {
 	int x, y, i, z, w;
-	char *c;
+	char *bnr;
 
 	x = va_arg(ap, int);
 	w = 0;
@@ -25,19 +25,19 @@ int print_b(va_list ap, char *buf, unsigned int ibuf)
 		x = (x * -1) - 1;
 		w = 1;
 	}
-	c = malloc(sizeof(char) * (32 + 1));
-	c = f_b_r(c, x, w, 32);
+	bnr = malloc(sizeof(char) * (32 + 1));
+	bnr = f_b_r(bnr, x, w, 32);
 	z = 0;
-	for (y = i = 0; c[i]; i++)
+	for (y = i = 0; bnr[i]; i++)
 	{
-		if (z == 0 && c[i] == '1')
+		if (z == 0 && bnr[i] == '1')
 			z = 1;
 		if (z == 1)
 		{
-			ibuf = handl_buffer(buf, c[i], ibuf);
+			ibuf = handl_buffer(buf, bnr[i], ibuf);
 			y++;
 		}
 	}
-	free(c);
+	free(bnr);
 	return (y);
 }
