@@ -10,7 +10,7 @@
 
 int printlhex(va_list ap, char *buf, unsigned int ibuf)
 {
-	long int x, i, w, y, f_dt;
+	long int x, i, w, y, f_d;
 	char *hex, *b;
 
 	x = va_arg(ap, long int);
@@ -30,11 +30,11 @@ int printlhex(va_list ap, char *buf, unsigned int ibuf)
 	b = f_b_r(b, x, w, 64);
 	hex = malloc(sizeof(char) * (16 + 1));
 	hex = f_h_r(b, hex, 0, 16);
-	for (f_dt = i = y = 0; hex[i]; i++)
+	for (f_d = i = y = 0; hex[i]; i++)
 	{
-		if (hex[i] != '0' && f_dt == 0)
-			f_dt = 1;
-		if (f_dt)
+		if (hex[i] != '0' && f_d == 0)
+			f_d = 1;
+		if (f_d)
 		{
 			ibuf = handl_buffer(buf, hex[i], ibuf);
 			y++;

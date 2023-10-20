@@ -13,7 +13,7 @@ int print_r(va_list ap, char *buf, unsigned int ibuf)
 	char *s;
 	unsigned int i;
 	int j = 0;
-	char c[] = "(nil)";
+	char c[] = "(llun)";
 
 	s = va_arg(ap, char *);
 	if (s == NULL)
