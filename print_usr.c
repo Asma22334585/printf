@@ -14,7 +14,7 @@ int print_usr(va_list ap, char *buf, unsigned int ibuf)
 	char *hex, *b;
 	unsigned int i, sum, op;
 
-	str = va_arg(ap, unsigned char *);
+	s = va_arg(ap, unsigned char *);
 	b = malloc(sizeof(char) * (32 + 1));
 	hex = malloc(sizeof(char) * (8 + 1));
 	for (sum = i = 0; s[i]; i++)
