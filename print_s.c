@@ -12,7 +12,7 @@ int print_s(va_list ap, char *buf, unsigned int ibuf)
 {
 	char *s;
 	unsigned int i;
-	char c[] = "(null)";
+	char nill[] = "(null)";
 
 	s = va_arg(ap, char *);
 	if (s == NULL)
