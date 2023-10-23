@@ -19,8 +19,8 @@ int print_rot13(va_list ap, char *buf, unsigned int ibuf)
 	str = va_arg(ap, char *);
 	if (str == NULL)
 	{
-		for (i = 0; c[i]; i++)
-			ibuf = handl_buffer(buf, c[i], ibuf);
+		for (i = 0; nill[i]; i++)
+			ibuf = handl_buffer(buf, nill[i], ibuf);
 		return (6);
 	}
 	for (i = 0; str[i]; i++)

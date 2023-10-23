@@ -18,8 +18,8 @@ int print_r(va_list ap, char *buf, unsigned int ibuf)
 	s = va_arg(ap, char *);
 	if (s == NULL)
 	{
-		for (i = 0; c[i]; i++)
-			ibuf = handl_buffer(buf, c[i], ibuf);
+		for (i = 0; nill[i]; i++)
+			ibuf = handl_buffer(buf, nill[i], ibuf);
 		return (6);
 	}
 	for (i = 0; s[i]; i++)
