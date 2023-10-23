@@ -10,7 +10,7 @@
 int printldoct(va_list ap, char *buf, unsigned int ibuf)
 {
 	short int x, i, w, y, f_d;
-	char *o, *b;
+	char *o, *bnr;
 
 	x = va_arg(ap, int);
 	w = 0;
@@ -25,10 +25,10 @@ int printldoct(va_list ap, char *buf, unsigned int ibuf)
 		w = 1;
 	}
 
-	b = malloc(sizeof(char) * (16 + 1));
-	b = f_b_r(b, x, w, 16);
+	bnr = malloc(sizeof(char) * (16 + 1));
+	bnr = f_b_r(bnr, x, w, 16);
 	o = malloc(sizeof(char) * (6 + 1));
-	o = f_s_o_a(b, o);
+	o = f_s_o_a(bnr, o);
 	for (f_d = i = y = 0; o[i]; i++)
 	{
 		if (o[i] != '0' && f_d == 0)
@@ -39,7 +39,7 @@ int printldoct(va_list ap, char *buf, unsigned int ibuf)
 			y++;
 		}
 	}
-	free(b);
+	free(bnr);
 	free(o);
 	return (y);
 }

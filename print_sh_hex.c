@@ -10,7 +10,7 @@
 int printshhex(va_list ap, char *buf, unsigned int ibuf)
 {
 	short int x, i, w, y, f_d;
-	char *hex, *b;
+	char *hex, *bnr;
 
 	x = va_arg(ap, int);
 	w = 0;
@@ -25,10 +25,10 @@ int printshhex(va_list ap, char *buf, unsigned int ibuf)
 		w = 1;
 	}
 
-	b = malloc(sizeof(char) * (16 + 1));
-	b = f_b_r(b, x, w, 16);
+	bnr = malloc(sizeof(char) * (16 + 1));
+	bnr = f_b_r(bnr, x, w, 16);
 	hex = malloc(sizeof(char) * (4 + 1));
-	hex = f_h_r(b, hex, 0, 4);
+	hex = f_h_r(bnr, hex, 0, 4);
 	for (f_d = i = y = 0; hex[i]; i++)
 	{
 		if (hex[i] != '0' && f_d == 0)
@@ -39,7 +39,7 @@ int printshhex(va_list ap, char *buf, unsigned int ibuf)
 			y++;
 		}
 	}
-	free(b);
+	free(bnr);
 	free(hex);
 	return (y);
 }

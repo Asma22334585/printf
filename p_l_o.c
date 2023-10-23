@@ -9,7 +9,7 @@
 int print_long_oct(va_list ap, char *buf, unsigned int ibuf)
 {
 	long int x, i, w, y, f_d;
-	char *o, *b;
+	char *o, *bnr;
 
 	x = va_arg(ap, long int);
 	w = 0;
@@ -24,10 +24,10 @@ int print_long_oct(va_list ap, char *buf, unsigned int ibuf)
 		w = 1;
 	}
 
-	b = malloc(sizeof(char) * (64 + 1));
-	b = f_b_r(b, x, w, 64);
+	bnr = malloc(sizeof(char) * (64 + 1));
+	bnr = f_b_r(bnr, x, w, 64);
 	o = malloc(sizeof(char) * (22 + 1));
-	o = f_l_o_a(b, o);
+	o = f_l_o_a(bnr, o);
 	for (f_d = i = y = 0; o[i]; i++)
 	{
 		if (o[i] != '0' && f_d == 0)
@@ -38,7 +38,7 @@ int print_long_oct(va_list ap, char *buf, unsigned int ibuf)
 			y++;
 		}
 	}
-	free(b);
+	free(bnr);
 	free(o);
 	return (y);
 }

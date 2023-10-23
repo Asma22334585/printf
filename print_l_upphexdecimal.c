@@ -10,7 +10,7 @@
 int printlupphexdecimal(va_list ap, char *buf, unsigned int ibuf)
 {
 	long int x, i, w, y, f_d;
-	char *hex, *b;
+	char *hex, *bnr;
 
 	x = va_arg(ap, long int);
 	w = 0;
@@ -25,10 +25,10 @@ int printlupphexdecimal(va_list ap, char *buf, unsigned int ibuf)
 		w = 1;
 	}
 
-	b = malloc(sizeof(char) * (64 + 1));
-	b = f_b_r(b, x, w, 64);
+	bnr = malloc(sizeof(char) * (64 + 1));
+	bnr = f_b_r(bnr, x, w, 64);
 	hex = malloc(sizeof(char) * (16 + 1));
-	hex = f_h_r(b, hex, 1, 16);
+	hex = f_h_r(bnr, hex, 1, 16);
 	for (f_d = i = y = 0; hex[i]; i++)
 	{
 		if (hex[i] != '0' && f_d == 0)
@@ -39,7 +39,7 @@ int printlupphexdecimal(va_list ap, char *buf, unsigned int ibuf)
 			y++;
 		}
 	}
-	free(b);
+	free(bnr);
 	free(hex);
 	return (y);
 }

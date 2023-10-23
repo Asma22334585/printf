@@ -11,11 +11,11 @@
 int print_usr(va_list ap, char *buf, unsigned int ibuf)
 {
 	unsigned char *s;
-	char *hex, *b;
+	char *hex, *bnr;
 	unsigned int i, sum, op;
 
 	s = va_arg(ap, unsigned char *);
-	b = malloc(sizeof(char) * (32 + 1));
+	bnr = malloc(sizeof(char) * (32 + 1));
 	hex = malloc(sizeof(char) * (8 + 1));
 	for (sum = i = 0; s[i]; i++)
 	{
@@ -24,8 +24,8 @@ int print_usr(va_list ap, char *buf, unsigned int ibuf)
 			ibuf = handl_buffer(buf, '\\', ibuf);
 			ibuf = handl_buffer(buf, 'x', ibuf);
 			op = s[i];
-			b = f_b_r(b, op, 0, 32);
-			hex = f_h_r(b, hex, 1, 8);
+			bnr = f_b_r(bnr, op, 0, 32);
+			hex = f_h_r(bnr, hex, 1, 8);
 			ibuf = handl_buffer(buf, hex[6], ibuf);
 			ibuf = handl_buffer(buf, hex[7], ibuf);
 			sum += 3;
@@ -33,7 +33,7 @@ int print_usr(va_list ap, char *buf, unsigned int ibuf)
 		else
 			ibuf = handl_buffer(buf, s[i], ibuf);
 	}
-	free(b);
+	free(bnr);
 	free(hex);
 	return (i + sum);
 }

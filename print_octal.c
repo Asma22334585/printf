@@ -10,7 +10,7 @@
 int print_octal(va_list ap, char *buf, unsigned int ibuf)
 {
 	int x, i, w, y, f_d;
-	char *o, *b;
+	char *o, *bnr;
 
 	x = va_arg(ap, int);
 	w = 0;
@@ -24,10 +24,10 @@ int print_octal(va_list ap, char *buf, unsigned int ibuf)
 		x = (x * -1) - 1;
 		w = 1;
 	}
-	b = malloc(sizeof(char) * (32 + 1));
-	b = f_b_r(b, x, w, 32);
+	bnr = malloc(sizeof(char) * (32 + 1));
+	bnr = f_b_r(bnr, x, w, 32);
 	o = malloc(sizeof(char) * (11 + 1));
-	o = fill_octal_array(b, o);
+	o = fill_octal_array(bnr, o);
 	for (f_d = i = y = 0; o[i]; i++)
 	{
 		if (o[i] != '0' && f_d == 0)
@@ -38,7 +38,7 @@ int print_octal(va_list ap, char *buf, unsigned int ibuf)
 			y++;
 		}
 	}
-	free(b);
+	free(bnr);
 	free(o);
 	return (y);
 }
